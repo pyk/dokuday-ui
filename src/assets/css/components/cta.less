@@ -1,0 +1,47 @@
+.cta {
+    padding-top: 45px;
+    text-align: center;
+}
+.cta-text {
+    margin-bottom: 60px;
+
+    h1 {
+        font-size: 48px;
+        color: @cl_font_cta_h1;
+        line-height: 65px;
+        margin: 0;
+
+        @media (max-width: 500px) {
+            font-size: 36px;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        color: @cl_font_cta_h3;
+        line-height: 27px;
+        margin: 0;
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.cta-btn {
+    padding: 16px 32px;
+    border: 2px solid;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: @cl_cta_btn;
+    letter-spacing: 1px;
+    &:hover {
+        color: @cl_cta_btn_hover;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 13px;
+    }
+}
