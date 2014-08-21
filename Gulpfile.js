@@ -71,7 +71,8 @@ var csso = require('gulp-csso');
 
 var lessSrc = [
   "./src/assets/css/*.less",
-  "./src/assets/css/components/*.less"
+  "./src/assets/css/components/*.less",
+  "./src/assets/css/components/**/*.less"
 ];
 
 gulp.task('less', function () {
