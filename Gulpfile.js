@@ -13,9 +13,13 @@ var log = gutil.log;
 var colors = gutil.colors;
 
 // layout
+var htmls = [
+    "./src/html/*.*",
+    "./src/html/**/*.*"
+];
 gulp.task("layout", function() {
-  gulp.src("./src/index.html")
-    .pipe(gulp.dest("./build/"))
+  gulp.src(htmls, { base: "./src/html"})
+    .pipe(gulp.dest("./build/"));
 })
 
 // views
@@ -119,7 +123,7 @@ gulp.task("app", function () {
 
  */
 gulp.task("watch", function () {
-  gulp.watch("./src/*.html", ["layout"]);
+  gulp.watch(["./src/html/*.html", "./src/html/**/*.html"], ["layout"]);
   gulp.watch("./src/assets/views/*.html", ["views"]);
   // watch less files, and compile main.less
   gulp.watch(lessSrc, ["less"]);
