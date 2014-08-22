@@ -88,13 +88,14 @@ gulp.task('less', function () {
   TODO:
   [x] copy angularjs.min di libs folder ke build/assets/libs
  */
-var ngLibs = [
+var libs = [
+  "./src/libs/jquery/dist/jquery.min.js",
   "./src/libs/angular/angular.min.js",
   "./src/libs/angular-route/angular-route.min.js",
   "./src/libs/angular-loading-bar/build/loading-bar.min.js"
   ]
-gulp.task("angularlibs", function () {
-  gulp.src(ngLibs)
+gulp.task("libs", function () {
+  gulp.src(libs)
     .pipe(gulp.dest("./build/assets/libs/"));
 });
 
@@ -135,7 +136,7 @@ gulp.task("watch", function () {
   BUILD
 
  */
-var tasks = ["layout", "views", "images", "rootFile", "less", "app", "angularlibs"]
+var tasks = ["layout", "views", "images", "rootFile", "less", "app", "libs"]
 gulp.task("build", tasks, function() {})
 /*
   Server
@@ -149,7 +150,7 @@ var http = require("http");
 var HOST = "localhost";
 var PORT = 4000;
 
-var deps = ["watch", "angularlibs"]
+var deps = ["watch", "libs"]
 gulp.task('server',deps, function(callback) {
 
   // set connect middleware
