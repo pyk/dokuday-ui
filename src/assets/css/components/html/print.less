@@ -1,0 +1,152 @@
+// .header-print
+h2.header-print-h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: @cl_font_print_header_h2;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-print {
+    .set-column-offset(1);
+    margin-bottom: 25px;
+}
+
+.form-content-input {
+    h3 {
+        font-weight: 700;
+        font-size: 14px;
+        color: @cl_font_form_content_input_h3;
+        line-height: 19px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 12px;
+        color: @cl_font_form_content_input_p;
+        line-height: 17px;
+        margin: 0 0 13px 0;
+    }
+
+    input.dokuday-form-text {
+        width: 100%;
+        background: @bg_form_input_text;
+        border: 0;
+
+        &:focus {
+            outline: @cl_form_input_focus_outline auto 2px;
+        }
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        color: @cl_font_form_content_input_text;
+        padding: 16px;
+    }
+
+    input[type="radio"] {
+        -webkit-appearance: none;
+        background-color: @bg_form_input_radio;
+        border-radius: 100px;
+        cursor: pointer;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:checked {
+            background-color: @bg_form_input_radio_checked;
+        }
+    }
+
+}
+::-webkit-input-placeholder {
+    color: #F04848;
+    text-align: right;
+    opacity:1;
+}
+
+:-moz-placeholder {
+    color: #F04848;
+    text-align: right;
+    opacity:1;
+}
+
+::-moz-placeholder {
+    color: #F04848;
+    text-align: right;
+    opacity:1;
+}
+
+:-ms-input-placeholder {
+    color: #F04848;
+    text-align: right;
+    opacity:1;
+}
+
+.form-content-radio {
+    padding-left:  (@grid-gutter-width / 2);
+    padding-right: (@grid-gutter-width / 2);
+    margin-bottom: 15px;
+}
+.form-content-radio-button {
+    float: left;
+    margin-right: 18px;
+    padding: 2px 0 2px 0;
+}
+
+.form-content-radio-text {
+    float: left;
+
+    p {
+        margin: 0;
+    }
+}
+
+.upload-btn {
+    width: 100%;
+    text-align: center;
+    border: 2px solid;
+    color: @cl_cta_btn;
+    padding: 16px 0 16px 0;
+    cursor: pointer;
+    &:hover {
+        color: @cl_cta_btn_hover;
+    }
+
+    span {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+}
+
+.input-upload {
+    display: none;
+}
+
+.upload-progress {
+    margin-top: 15px;
+}
+.upload-circular-progress {
+    float: left;
+    margin-right: 15px;
+}
+
+.upload-meta {
+    float: left;
+}
+
+.status-success, .status-error {
+    float: right;
+}
+p.error-text {
+    color: #F04848;
+}

@@ -1,0 +1,210 @@
+// .navigation
+.logo {
+    padding: 32px 0 32px 0;
+    float: left;
+}
+
+.nav-a {
+    text-align: right;
+    padding: 40px 0 41px 0;
+    float: right;
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline;
+            margin-left: 16px;
+
+            a {
+                font-weight: 700;
+                font-size: @size_nav_a;
+                color: @cl_font_nav_a;
+                line-height: 17px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    color: @cl_font_nav_a_hover;
+                }
+            }
+        }
+    }
+}
+
+// .cta
+.cta {
+    padding-top: 45px;
+    text-align: center;
+}
+.cta-text {
+    margin-bottom: 60px;
+
+    h1 {
+        font-size: @size_cta_h1;
+        color: @cl_font_cta_h1;
+        line-height: 65px;
+        margin: 0;
+
+        @media (max-width: 500px) {
+            font-size: 36px;
+            line-height: 60px;
+        }
+        @media (max-width: 400px) {
+            font-size: 28px;
+            line-height: 50px;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        color: @cl_font_cta_h3;
+        line-height: 27px;
+        margin: 0;
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+        }
+        @media (max-width: 400px) {
+            font-size: 13px;
+        }
+    }
+}
+
+.cta-btn-wr {
+    margin: 80px 0;
+}
+.cta-btn {
+    background: @cl_bg_cta_btn;
+    border-radius: 3px;
+    padding: 16px 32px;
+    border: 2px solid @cl_cta_btn_border;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: @cl_cta_btn;
+    letter-spacing: 1px;
+    &:hover {
+        opacity: 0.8;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 13px;
+    }
+}
+
+// Illustration
+.illustration {
+    background-image: url("../images/illustration.png");
+    height: 213px;
+    background-position: center center;
+    background-size: 610px;
+    background-repeat: no-repeat;
+    margin-top: -90px;
+    margin-bottom: 50px;
+}
+
+// Reason
+.reason {
+}
+.reason-illustration {
+    text-align: center;
+}
+.right-illustration {
+    @media (min-width: @small-screen) {
+        float: right!important;
+    }
+}
+
+.reason-text {
+
+    h2 {
+        font-weight: 700;
+        font-size: 16px;
+        color: @cl_font_reason_h2;
+        line-height: 36px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 14px;
+        color: @cl_font_reason_p;
+        line-height: 21px;
+        margin: 0;
+        @media (max-width: 320px) {
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+
+    @media (max-width: @small-screen) {
+        text-align: center;
+    }
+
+    margin-bottom: 16px;
+}
+.reason-1.reason-illustration {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    @media (max-width: @small-screen) {
+        padding-bottom: 15px;
+    }
+}
+.reason-2.reason-illustration {
+    padding-top: 41.5px;
+    padding-bottom: 41.5px;
+    @media (max-width: @small-screen) {
+        padding-bottom: 15px;
+    }
+}
+.reason-3.reason-illustration {
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+    @media (max-width: @small-screen) {
+        padding-bottom: 15px;
+    }
+}
+
+// contact
+.contact {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    h2 {
+        font-weight: 400;
+        font-size: 24px;
+        color: @cl_font_contact_h2;
+        line-height: 36px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 14px;
+        color: @cl_font_contact_p;
+        line-height: 21px;
+        margin: 0;
+        @media (max-width: 320px) {
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+
+    @media (max-width: @small-screen) {
+        text-align: center;
+    }
+}
+
+// Footer
+.footer-text {
+    padding-top: 39.5px;
+    padding-bottom: 39.5px;
+    text-align: center;
+    p {
+        font-size: 12px;
+        color: @cl_font_footer_p;
+        line-height: 21px;
+        margin: 0;
+    }
+
+}
