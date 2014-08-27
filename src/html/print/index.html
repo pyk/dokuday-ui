@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id" ng-app="dokuday" prefix="og: http://ogp.me/ns/website#">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dokuday - Gak perlu lagi merepotkan teman</title>
+        <meta name="description" content="Dokuday adalah Service-Oriented Startup yang berinovasi di bidang layanan percetakan berkas tugas mahasiswa di kampus.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script src="/assets/libs/jquery.min.js"></script>
+        <script src="/assets/libs/jquery.knob.min.js"></script>
+        <script src="/assets/libs/angular-file-upload-html5-shim.min.js"></script>
+        <script src="/assets/libs/angular.min.js"></script>
+        <script src="/assets/libs/angular-file-upload.min.js"></script>
+        <script src="/assets/libs/angular-knob.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@dokuday">
+        <meta name="twitter:creator" content="@peeyek">
+        <meta name="twitter:title" content="Dokuday - Males keluar rumah? Yuk print tugas disini">
+        <meta name="twitter:description" content="Dokuday adalah Service-Oriented Startup yang berinovasi di bidang layanan percetakan berkas tugas mahasiswa di kampus.">
+        <meta name="twitter:image:src" content="">
+
+        <!-- The Open Graph protocol -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Dokuday - Males keluar rumah? Yuk print tugas disini" />
+        <meta property="og:description" content="Dokuday adalah Service-Oriented Startup yang berinovasi di bidang layanan percetakan berkas tugas mahasiswa di kampus." />
+        <meta property="og:url" content="http://dokuday.com" />
+        <meta property="og:image" content="" />
+    </head>
+    <body>
+        <div class="container" ng-controller="PrintCtrl">
+            <!-- .navigation -->
+            <div class="row navigation">
+                <div class="column-4">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/assets/images/logo.png" alt="Dokuday - Males keluar rumah? Yuk print tugas disini">
+                        </a>
+                    </div>
+
+                    <div class="nav-a">
+                        <ul>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">@dokuday</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /.navigation -->
+           <!-- .header-print -->
+            <div class="row header-print">
+                <div class="column-4">
+                   <h2 class="header-print-h2">Print Berkas</h2>
+                </div>
+            </div>
+            <!-- /.header-print -->
+            <form method="post">
+                <!-- .form-nama -->
+                <div class="row form-nama">
+                    <div class="column-2 form-print form-content-input">
+                        <h3>Nama</h3>
+                        <p>Tulis Namamu</p>
+                        <input class="dokuday-form-text" type="text" name="nama" placeholder="*">
+                    </div>
+                </div>
+                <!-- /.form-nama -->
+                <!-- .form-tlp -->
+                <div class="row form-tlp">
+                    <div class="column-2 form-print form-content-input">
+                        <h3>Nomor Telepon</h3>
+                        <p>Pastikan nomor telepon bisa di hubungi</p>
+                        <input class="dokuday-form-text" type="text" name="telepon" placeholder="*">
+                    </div>
+                </div>
+                <!-- /.form-tlp -->
+                <!-- .form-waktu-tempat -->
+                <div class="row form-waktu-tempat">
+                    <div class="column-2 form-print form-content-input">
+                        <h3>Waktu &amp; Tempat Pengambilan</h3>
+                        <p>Pilih waktu &amp; tempat untuk pengambilan sekaligus pembayaran berkas</p>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="waktu-tempat" value="besok">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Besok, Pukul 06.00 - 06.30 Pagi</h3>
+                                <p>Di lobby Fakultas Sains dan Teknologi</p>
+                            </div>
+                        </div>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="waktu-tempat" value="besok">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Besok, Pukul 11.00 - 11.30 Siang</h3>
+                                <p>Di lobby Fakultas Sains dan Teknologi</p>
+                            </div>
+                        </div>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="waktu-tempat" value="besok">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Besok, Pukul 06.00 - 06.30 Pagi</h3>
+                                <p>Di lobby Fakultas Ekonomi dan Bisnis</p>
+                            </div>
+                        </div>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="waktu-tempat" value="besok">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Besok, Pukul 11.00 - 11.30 Siang</h3>
+                                <p>Di lobby Fakultas Ekonomi dan Bisnis</p>
+                            </div>
+                        </div>
+                        <p>Saat ini <b>dokuday</b> hanya tersedia di FST &amp; FEB, untuk fakultas lain silahkan hubungi kami</p>
+                    </div>
+                </div>
+                <!-- /.form-waktu-tempat -->
+                <!-- .form-upload -->
+                <div class="row form-upload">
+                    <div class="column-2 form-print form-content-input">
+                        <h3>Upload File</h3>
+                        <p>Dokuday menduung file dengan format berikut PDF, DOCX, DOC, PPT, PPTX &amp; ODP</p>
+                        <div class="upload-btn" ng-click="selectFile()">
+                            <span>Pilih File</span>
+                        </div>
+                        <input class="input-upload" type="file" name="upload" accept=".pdf, .doc, .docx, .ppt, .pptx, .odp" ng-file-select="onFileSelect($files)"/>
+                        <div class="row upload-progress" ng-hide="!showProgress">
+                            <div class="column-4">
+                                <div class="upload-circular-progress">
+                                    <knob knob-data="data" knob-max="100" knob-options="knobOptions"></knob>
+                                </div>
+                                <div class="upload-meta">
+                                    <h3>{{ file.nama }}</h3>
+                                    <p>{{ file.size }}</p>
+                                </div>
+                                <div class="status-success" ng-hide="!statusSuccess">
+                                    <img src="/assets/images/success.png" alt="Upload success">
+                                </div>
+                                <div class="status-error" ng-hide="!statusError">
+                                    <img src="/assets/images/error.png" alt="Upload error">
+                                </div>
+                            </div>
+                            <p class="column-4 error-text" ng-hide="!statusError">Maaf terjadi kesalahan saat mengupload file. Periksa koneksi internet anda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-upload -->
+            </form>
+        </div>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
