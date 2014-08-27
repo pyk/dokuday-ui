@@ -7,10 +7,14 @@
         <meta name="description" content="Dokuday adalah Service-Oriented Startup yang berinovasi di bidang layanan percetakan berkas tugas mahasiswa di kampus.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/dokuday-ui/assets/css/main.css">
-        <script src="/dokuday-ui/assets/libs/angular.min.js"></script>
-        <script src="/dokuday-ui/assets/libs/jquery.min.js"></script>
-        <script src="/dokuday-ui/assets/js/app.js"></script>
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script src="/assets/libs/jquery.min.js"></script>
+        <script src="/assets/libs/jquery.knob.min.js"></script>
+        <script src="/assets/libs/angular-file-upload-html5-shim.min.js"></script>
+        <script src="/assets/libs/angular.min.js"></script>
+        <script src="/assets/libs/angular-file-upload.min.js"></script>
+        <script src="/assets/libs/angular-knob.js"></script>
+        <script src="/assets/js/app.js"></script>
 
         <!-- Twitter Cards -->
         <meta name="twitter:card" content="summary_large_image">
@@ -60,7 +64,7 @@
                     <div class="column-2 form-print form-content-input">
                         <h3>Nama</h3>
                         <p>Tulis Namamu</p>
-                        <input type="text" name="nama" placeholder="*">
+                        <input class="dokuday-form-text" type="text" name="nama" placeholder="*">
                     </div>
                 </div>
                 <!-- /.form-nama -->
@@ -69,7 +73,7 @@
                     <div class="column-2 form-print form-content-input">
                         <h3>Nomor Telepon</h3>
                         <p>Pastikan nomor telepon bisa di hubungi</p>
-                        <input type="text" name="telepon" placeholder="*">
+                        <input class="dokuday-form-text" type="text" name="telepon" placeholder="*">
                     </div>
                 </div>
                 <!-- /.form-tlp -->
@@ -130,8 +134,25 @@
                         <div class="upload-btn" ng-click="selectFile()">
                             <span>Pilih File</span>
                         </div>
-
-                        <input class="input-upload" type="file" name="upload" accept=".pdf, .doc, .docx, .ppt, .pptx, .odp" />
+                        <input class="input-upload" type="file" name="upload" accept=".pdf, .doc, .docx, .ppt, .pptx, .odp" ng-file-select="onFileSelect($files)"/>
+                        <div class="row upload-progress" ng-hide="!showProgress">
+                            <div class="column-4">
+                                <div class="upload-circular-progress">
+                                    <knob knob-data="data" knob-max="100" knob-options="knobOptions"></knob>
+                                </div>
+                                <div class="upload-meta">
+                                    <h3>{{ file.nama }}</h3>
+                                    <p>{{ file.size }}</p>
+                                </div>
+                                <div class="status-success" ng-hide="!statusSuccess">
+                                    <img src="/assets/images/success.png" alt="Upload success">
+                                </div>
+                                <div class="status-error" ng-hide="!statusError">
+                                    <img src="/assets/images/error.png" alt="Upload error">
+                                </div>
+                            </div>
+                            <p class="column-4 error-text" ng-hide="!statusError">Maaf terjadi kesalahan saat mengupload file. Periksa koneksi internet anda</p>
+                        </div>
                     </div>
                 </div>
                 <!-- /.form-upload -->
