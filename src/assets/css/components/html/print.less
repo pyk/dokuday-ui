@@ -1,3 +1,7 @@
+.form-print-wrapper {
+    .set-column-offset(1);
+    padding-bottom: 150px;
+}
 // .header-print
 h2.header-print-h2 {
     text-align: center;
@@ -10,7 +14,6 @@ h2.header-print-h2 {
 }
 
 .form-print {
-    .set-column-offset(1);
     margin-bottom: 25px;
 }
 
@@ -41,14 +44,16 @@ h2.header-print-h2 {
     }
 
     input[type="text"] {
-        font-size: 12px;
+        font-size: 14px;
+        font-weight: 600;
         color: @cl_font_form_content_input_text;
         padding: 16px;
     }
 
     input[type="radio"] {
         -webkit-appearance: none;
-        background-color: @bg_form_input_radio;
+        // background-color: @bg_form_input_radio;
+        border: 2px solid @border_form_input_radio;
         border-radius: 100px;
         cursor: pointer;
         display: inline-block;
@@ -66,26 +71,22 @@ h2.header-print-h2 {
 
 }
 ::-webkit-input-placeholder {
-    color: #F04848;
-    text-align: right;
+    color: #FEFEFE;
     opacity:1;
 }
 
 :-moz-placeholder {
-    color: #F04848;
-    text-align: right;
+    color: #FEFEFE;
     opacity:1;
 }
 
 ::-moz-placeholder {
-    color: #F04848;
-    text-align: right;
+    color: #FEFEFE;
     opacity:1;
 }
 
 :-ms-input-placeholder {
-    color: #F04848;
-    text-align: right;
+    color: #FEFEFE;
     opacity:1;
 }
 
@@ -102,7 +103,7 @@ h2.header-print-h2 {
 
 .form-content-radio-text {
     float: left;
-
+    max-width: 212px;
     p {
         margin: 0;
     }
@@ -111,12 +112,12 @@ h2.header-print-h2 {
 .upload-btn {
     width: 100%;
     text-align: center;
-    border: 2px solid;
     color: @cl_cta_btn;
+    background: @cl_bg_cta_btn;
     padding: 16px 0 16px 0;
     cursor: pointer;
     &:hover {
-        color: @cl_cta_btn_hover;
+        opacity: 0.8;
     }
 
     span {
@@ -149,4 +150,63 @@ h2.header-print-h2 {
 }
 p.error-text {
     color: #F04848;
+    padding: 0;
 }
+
+// Blue box
+.blue-box {
+    background: @cl_bg_blue_box;
+    height: 45px;
+    text-align: center;
+
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        padding-top: 11.5px;
+        font-weight: 600;
+        color: #FEFEFE;
+    }
+}
+
+// tos text
+.tos-text {
+}
+// TOS
+.form-tos {
+    margin-bottom: 25px;
+}
+.form-tos-checkbox {
+    float: left;
+    margin-right: 8px;
+}
+
+.form-tos-text {
+    font-size: 12px;
+    color: #66718D;
+    line-height: 17px;
+    margin: 0 0 13px;
+}
+
+.btn-submit-wrapper {
+    .set-column-offset(2);
+}
+.btn-submit {
+    width: 100%;
+    text-align: center;
+    color: #FEFEFE;
+    background: #8BC2EE;
+    padding: 16px 0;
+    cursor: pointer;
+    span {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
