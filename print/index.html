@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dokuday - Gak perlu lagi merepotkan teman</title>
+        <title>Dokuday - We help student in an innovative way</title>
         <meta name="description" content="Dokuday adalah Service-Oriented Startup yang berinovasi di bidang layanan percetakan berkas tugas mahasiswa di kampus.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -51,35 +51,36 @@
                 </div>
             </div>
             <!-- /.navigation -->
-           <!-- .header-print -->
-            <div class="row header-print">
-                <div class="column-4">
+            <!-- .form-print-wrapper -->
+            <div class="row">
+            <div class="column-2 form-print-wrapper">
+                <!-- .header-print -->
+                <div class="header-print">
                    <h2 class="header-print-h2">Print Berkas</h2>
                 </div>
-            </div>
-            <!-- /.header-print -->
-            <form method="post">
+                <!-- /.header-print -->
+
                 <!-- .form-nama -->
-                <div class="row form-nama">
-                    <div class="column-2 form-print form-content-input">
+                <div class="form-nama">
+                    <div class="form-print form-content-input">
                         <h3>Nama</h3>
                         <p>Tulis Namamu</p>
-                        <input class="dokuday-form-text" type="text" name="nama" placeholder="*">
+                        <input class="dokuday-form-text" type="text" name="nama" placeholder="">
                     </div>
                 </div>
                 <!-- /.form-nama -->
                 <!-- .form-tlp -->
-                <div class="row form-tlp">
-                    <div class="column-2 form-print form-content-input">
+                <div class="form-tlp">
+                    <div class="form-print form-content-input">
                         <h3>Nomor Telepon</h3>
                         <p>Pastikan nomor telepon bisa di hubungi</p>
-                        <input class="dokuday-form-text" type="text" name="telepon" placeholder="*">
+                        <input class="dokuday-form-text" type="text" name="telepon" placeholder="">
                     </div>
                 </div>
                 <!-- /.form-tlp -->
                 <!-- .form-waktu-tempat -->
-                <div class="row form-waktu-tempat">
-                    <div class="column-2 form-print form-content-input">
+                <div class="form-waktu-tempat">
+                    <div class="form-print form-content-input">
                         <h3>Waktu &amp; Tempat Pengambilan</h3>
                         <p>Pilih waktu &amp; tempat untuk pengambilan sekaligus pembayaran berkas</p>
                         <div class="row form-content-radio">
@@ -127,8 +128,8 @@
                 </div>
                 <!-- /.form-waktu-tempat -->
                 <!-- .form-upload -->
-                <div class="row form-upload">
-                    <div class="column-2 form-print form-content-input">
+                <div class="form-upload">
+                    <div class="form-print form-content-input">
                         <h3>Upload File</h3>
                         <p>Dokuday menduung file dengan format berikut PDF, DOCX, DOC, PPT, PPTX &amp; ODP</p>
                         <div class="upload-btn" ng-click="selectFile()">
@@ -151,14 +152,118 @@
                                     <img src="/assets/images/error.png" alt="Upload error">
                                 </div>
                             </div>
-                            <p class="column-4 error-text" ng-hide="!statusError">Maaf terjadi kesalahan saat mengupload file. Periksa koneksi internet anda</p>
                         </div>
+                        <p class="column-4 error-text" ng-hide="!statusError">Maaf terjadi kesalahan saat mengupload file. Periksa koneksi internet anda</p>
                     </div>
                 </div>
                 <!-- /.form-upload -->
-            </form>
-        </div>
+                <!-- .form-jumlah-page-slide -->
+                <div class="form-jumlah-page-slide">
+                    <div class="form-print form-content-input">
+                        <h3>Jumlah Pages/Slides</h3>
+                        <p>Masukkan jumlah page/slide di file yang akan di print</p>
+                        <input class="dokuday-form-text" type="text" name="jumlah-page-slides" placeholder="">
+                    </div>
+                </div>
+                <!-- /.form-jumlah-page-slide -->
+                <!-- .form-print-pages -->
+                <div class="form-print-pages">
+                    <div class="form-print form-content-input">
+                        <h3>Print Pages</h3>
+                        <p>Masukkan pages berapa aja yang akan di print</p>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="form-print-pages" value="semua">
+                            </div>
 
+                            <div class="form-content-radio-text">
+                                <h3>Semua</h3>
+                                <p>Semua pages yang ada di file akan di print</p>
+                            </div>
+                        </div>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="form-print-pages" value="aje">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <input class="dokuday-form-text" type="text" placeholder="contoh 1,3,5-9,11-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-print-pages -->
+                <!-- .form-jilid -->
+                <div class="form-jilid">
+                    <div class="form-print form-content-input">
+                        <h3>Jilid</h3>
+                        <p>Pilih "Ya" jika berkas tugas yang di print ingin di jilid</p>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="form-jilid" value="ya">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Ya</h3>
+                                <p>+ Cover akan di print diatas kertas buffalo putih</p>
+                                <p>+ Berkas akam diberi sampul mika putih transparan</p>
+                            </div>
+                        </div>
+                        <div class="row form-content-radio">
+                            <div class="form-content-radio-button">
+                                <input type="radio" name="form-jilid" value="tidak">
+                            </div>
+
+                            <div class="form-content-radio-text">
+                                <h3>Tidak</h3>
+                                <p>Berkas tugas tidak perlu dijilid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-jilid -->
+                <!-- .form-kode-berkas -->
+                <div class="form-kode-berkas">
+                    <div class="form-print form-content-input">
+                        <h3>Kode Berkas</h3>
+                        <p>Kode ini untuk pengambilan berkasmu. Jangan sampai lupa ya</p>
+                        <div class="blue-box">
+                            <h2>B A Y - 4 6 5 1</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-kode-berkas -->
+                <!-- .form-total-biaya -->
+                <div class="form-total-biaya">
+                    <div class="form-print form-content-input">
+                        <h3>Total Biaya</h3>
+                        <p>Jumlah biaya yang harus dibayarkan untuk berkas ini. Pembayaran dilakukan saat bertemu staff <b>dokuday</b> di lobby fakultas</p>
+                        <div class="blue-box">
+                            <h2>Rp5000,00.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-total-biaya -->
+                <!-- .form-tos -->
+                <div class="form-tos">
+                    <div class="form-tos-checkbox">
+                        <input type="checkbox" name="form-tos" value="ya">
+                    </div>
+
+                    <div class="form-tos-text">
+                        <p>I Have read <a href="#">Tearm Of Service</a></p>
+                    </div>
+                </div>
+                <!-- /.form-tos -->
+                <div class="row">
+                    <div class="column-2 btn-submit-wrapper">
+                    <div class="btn-submit"><span>Submit</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- /.form-print-wrapper -->
+        </div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

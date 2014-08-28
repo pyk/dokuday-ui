@@ -4,7 +4,7 @@ app.controller("PrintCtrl",
         function ($s,$h, $u) {
             $s.showProgress = false;
             $s.statusSuccess = false;
-            $s.statusError = true;
+            $s.statusError = false;
             $s.file = {};
 
             $s.selectFile = function() {
@@ -38,6 +38,8 @@ app.controller("PrintCtrl",
                 console.log(file);
                 if (file !== null) {
                     $s.showProgress = true;
+                    // $s.statusError = true;
+                    $s.statusSuccess = true;
                 }
                 console.log($s.showProgress);
             };
@@ -48,8 +50,8 @@ app.controller("PrintCtrl",
               "width":32,
               "height":32,
               "displayInput": false,
-              "bgColor": "#18202b",
-              "fgColor":"#3ebd98",
+              "bgColor": "#FEFEFE",
+              "fgColor":"#8BC2EE",
               "readOnly": true
             };
 }]);
