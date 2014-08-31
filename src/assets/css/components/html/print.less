@@ -1,5 +1,5 @@
 .form-print-wrapper {
-    .set-column-offset(1);
+    // .set-column-offset(1);
     padding-bottom: 150px;
 }
 // .header-print
@@ -14,30 +14,31 @@ h2.header-print-h2 {
 }
 
 .form-print {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .form-content-input {
     h3 {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         color: @cl_font_form_content_input_h3;
         line-height: 19px;
         margin: 0;
     }
 
     p {
-        font-size: 12px;
+        font-size: 14px;
         color: @cl_font_form_content_input_p;
-        line-height: 17px;
-        margin: 0 0 13px 0;
+        line-height: 21px;
+        margin: 6px 0 13px 0;
     }
 
     input.dokuday-form-text {
         width: 100%;
         background: @bg_form_input_text;
-        border: 0;
-
+        border: 1px solid @border_form_input_text;
+        text-transform: capitalize;
+        border-radius: 3px;
         &:focus {
             outline: @cl_form_input_focus_outline auto 2px;
         }
@@ -71,23 +72,23 @@ h2.header-print-h2 {
 
 }
 ::-webkit-input-placeholder {
-    color: #FEFEFE;
-    opacity:1;
+    color: @cl_font_placeholder;
+    opacity:0.8;
 }
 
 :-moz-placeholder {
-    color: #FEFEFE;
-    opacity:1;
+    color: @cl_font_placeholder;
+    opacity:0.8;
 }
 
 ::-moz-placeholder {
-    color: #FEFEFE;
-    opacity:1;
+    color: @cl_font_placeholder;
+    opacity:0.8;
 }
 
 :-ms-input-placeholder {
-    color: #FEFEFE;
-    opacity:1;
+    color: @cl_font_placeholder;
+    opacity:0.8;
 }
 
 .form-content-radio {
@@ -103,7 +104,7 @@ h2.header-print-h2 {
 
 .form-content-radio-text {
     float: left;
-    max-width: 212px;
+    width: 80%;
     p {
         margin: 0;
     }
